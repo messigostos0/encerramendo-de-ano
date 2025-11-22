@@ -1,0 +1,188 @@
+/* ===== Corpo e fundo ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: url('img/fundo-livros.jpg') no-repeat center center fixed;
+  background-size: cover; /* ou 'cover' se quiser preencher a tela */
+}
+
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  background-color: rgba(254, 255, 254, 0.372);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 0 0 10px 10px;
+  z-index: 1000;
+}
+
+/* ===== Título ===== */
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #000;
+}
+
+/* ===== Botões de fonte ===== */
+.font-controls button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgba(254, 255, 254, 0.372);
+  border: none;
+  border-radius: 5px;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.2s;
+}
+
+.font-controls button:hover {
+  background-color: rgba(255,255,255,0.9);
+}
+
+/* ===== Menu hamburguer ===== */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+/* ===== Menu lateral ===== */
+#side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* escondido inicialmente */
+  width: 250px;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(254, 255, 254, 0.372);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: left 0.3s;
+  overflow-y: auto;
+  z-index: 999;
+  border-radius: 0 10px 10px 0;
+}
+
+#side-menu a {
+  display: block;
+  margin: 10px 0;
+  color: #000;
+  text-decoration: none;
+}
+
+#side-menu a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* ===== Sections ===== */
+section {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  background-color: rgba(254, 255, 254, 0.372);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+}
+
+/* ===== H2 das sections ===== */
+section h2 {
+  margin-top: 0;
+  color: #000;
+}
+
+/* ===== Parágrafos ===== */
+section p {
+  color: #000;
+  line-height: 1.5;
+}
+.side-images {
+  position: fixed;
+  top: 0;
+  width: 80px; /* largura da coluna de imagens */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* distribui as imagens igualmente */
+  z-index: 500; /* abaixo do header e menu */
+}
+
+.side-images.left {
+  left: 0;
+}
+
+.side-images.right {
+  right: 0;
+}
+
+.side-images img {
+  width: 70px; /* ajuste conforme quiser */
+  border-radius: 10px;
+  opacity: 0.8; /* dá uma leve transparência */
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.side-images img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+/* ===== Imagens laterais ===== */
+.side-images {
+  position: fixed;
+  top: 50%; /* centraliza verticalmente */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* espaço entre as imagens */
+  z-index: 500; /* fica atrás do menu e conteúdo */
+}
+
+.side-images img {
+  width: 50px; /* diminui todas as imagens */
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Lado esquerdo */
+.side-images.left {
+  left: 0; /* encostadas na esquerda */
+  padding-left: 50px; /* distância da borda */
+}
+
+/* Lado direito */
+.side-images.right {
+  right: 0; /* encostadas na direita */
+  padding-right: 10px;
+}
+.side-images img {
+  width: 50px;       /* diminua o tamanho se precisar */
+  height: auto;      /* mantém proporção */
+  display: block;    /* remove espaçamento em linha */
+  margin: 0;         /* remove margens externas */
+  padding: 0;        /* remove preenchimento interno */
+}
